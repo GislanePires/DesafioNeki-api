@@ -36,7 +36,7 @@ public class UserController {
         return ResponseEntity.ok(users);
     }
 
-    @GetMapping("/with-skills")
+    @GetMapping("/users-skills")
     @PreAuthorize("hasAuthority('ROLE_USER')")
     public ResponseEntity<List<UserWithSkillsDTO>> listUserWithSkills() {
         List<User> users = userRepository.findAll();
